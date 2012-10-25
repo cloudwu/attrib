@@ -206,7 +206,7 @@ attrib_read(struct attrib *a, int r) {
 	if (!a->calc) {
 		if (a->exp) {
 			_calc(a);
-			memset(a->dirty, false, sizeof(a->dirty) * a->cap);
+			memset(a->dirty, false, sizeof(bool) * a->cap);
 			a->calc = true;
 		}
 	}
