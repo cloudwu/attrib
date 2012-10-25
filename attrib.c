@@ -284,7 +284,7 @@ _compile(const char * expression, int max, union opt * os, const char ** err, in
 		case 'R':
 			++expression;
 			c = *expression;
-			if (c < '0' || c>='9') {
+			if (c < '0' || c>'9') {
 				*err = "Register syntax error";
 				return -1;
 			}
