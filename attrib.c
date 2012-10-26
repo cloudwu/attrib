@@ -583,7 +583,7 @@ _gen_depend(struct attrib_e *a) {
 	}
 	for (i=0;i<a->rcount;i++) {
 		bool mark[a->rcount];
-		memset(mark, 0, a->rcount);
+		memset(mark, 0, sizeof(bool) * a->rcount);
 		int * root = a->depend[i];
 		if (root) {
 			_mark_depend(a->depend, root, mark);
